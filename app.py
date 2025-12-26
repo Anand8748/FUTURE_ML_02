@@ -708,75 +708,94 @@ def create_navbar():
     # Style the navigation buttons with different colors using JavaScript
     st.markdown("""
     <style>
-    /* Base styles for all navigation buttons */
+    /* Base styles for all navigation buttons - Professional Design */
     div[data-testid="column"] button[kind="secondary"] {
-        border-radius: 5px !important;
-        padding: 0.5rem 1rem !important;
-        font-weight: 500 !important;
-        transition: all 0.3s ease !important;
+        border-radius: 8px !important;
+        padding: 0.6rem 1.2rem !important;
+        font-weight: 600 !important;
+        font-size: 0.95rem !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        letter-spacing: 0.3px !important;
+        text-transform: none !important;
     }
     </style>
     <script>
-    // Function to style navigation buttons by text content
+    // Function to style navigation buttons by text content with professional colors
     function styleNavButtons() {
         const buttons = document.querySelectorAll('button[kind="secondary"]');
         buttons.forEach(function(btn) {
             const text = btn.textContent.trim();
             if (text === 'Home') {
-                btn.style.background = 'rgba(59, 130, 246, 0.2)';
-                btn.style.color = '#3b82f6';
-                btn.style.border = '2px solid #3b82f6';
+                // Professional Sky Blue - welcoming and modern
+                btn.style.background = 'linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%)';
+                btn.style.color = '#0ea5e9';
+                btn.style.border = '2px solid #0ea5e9';
+                btn.style.boxShadow = '0 2px 8px rgba(14, 165, 233, 0.2)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = '#3b82f6';
+                    this.style.background = 'linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%)';
                     this.style.color = 'white';
                     this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px rgba(14, 165, 233, 0.4)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'rgba(59, 130, 246, 0.2)';
-                    this.style.color = '#3b82f6';
+                    this.style.background = 'linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%)';
+                    this.style.color = '#0ea5e9';
                     this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 2px 8px rgba(14, 165, 233, 0.2)';
                 });
             } else if (text === 'Predict Churn') {
-                btn.style.background = 'rgba(239, 68, 68, 0.2)';
-                btn.style.color = '#ef4444';
-                btn.style.border = '2px solid #ef4444';
+                // Professional Amber/Orange - attention-grabbing but sophisticated
+                btn.style.background = 'linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 146, 60, 0.15) 100%)';
+                btn.style.color = '#f59e0b';
+                btn.style.border = '2px solid #f59e0b';
+                btn.style.boxShadow = '0 2px 8px rgba(245, 158, 11, 0.2)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = '#ef4444';
+                    this.style.background = 'linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)';
                     this.style.color = 'white';
                     this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px rgba(245, 158, 11, 0.4)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'rgba(239, 68, 68, 0.2)';
-                    this.style.color = '#ef4444';
+                    this.style.background = 'linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 146, 60, 0.15) 100%)';
+                    this.style.color = '#f59e0b';
                     this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 2px 8px rgba(245, 158, 11, 0.2)';
                 });
             } else if (text === 'Analytics Dashboard') {
-                btn.style.background = 'rgba(168, 85, 247, 0.2)';
-                btn.style.color = '#a855f7';
-                btn.style.border = '2px solid #a855f7';
+                // Professional Indigo - analytical and trustworthy
+                btn.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%)';
+                btn.style.color = '#6366f1';
+                btn.style.border = '2px solid #6366f1';
+                btn.style.boxShadow = '0 2px 8px rgba(99, 102, 241, 0.2)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = '#a855f7';
+                    this.style.background = 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)';
                     this.style.color = 'white';
                     this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px rgba(99, 102, 241, 0.4)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'rgba(168, 85, 247, 0.2)';
-                    this.style.color = '#a855f7';
+                    this.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%)';
+                    this.style.color = '#6366f1';
                     this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 2px 8px rgba(99, 102, 241, 0.2)';
                 });
             } else if (text === 'Model Performance') {
-                btn.style.background = 'rgba(29, 185, 84, 0.2)';
-                btn.style.color = '#1DB954';
-                btn.style.border = '2px solid #1DB954';
+                // Professional Emerald - success-oriented and modern
+                btn.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%)';
+                btn.style.color = '#10b981';
+                btn.style.border = '2px solid #10b981';
+                btn.style.boxShadow = '0 2px 8px rgba(16, 185, 129, 0.2)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = '#1DB954';
+                    this.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
                     this.style.color = 'white';
                     this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px rgba(16, 185, 129, 0.4)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'rgba(29, 185, 84, 0.2)';
-                    this.style.color = '#1DB954';
+                    this.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%)';
+                    this.style.color = '#10b981';
                     this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 2px 8px rgba(16, 185, 129, 0.2)';
                 });
             }
         });
