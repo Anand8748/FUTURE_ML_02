@@ -705,73 +705,98 @@ def create_navbar():
             st.session_state.nav_page = "Model Performance"
             st.rerun()
     
-    # Style the navigation buttons with different colors using column targeting
+    # Style the navigation buttons with different colors using JavaScript
     st.markdown("""
     <style>
-    /* Home Button - Blue (Column 1) */
-    div[data-testid="column"]:nth-child(1) button[kind="secondary"] {
-        background: rgba(59, 130, 246, 0.2) !important;
-        color: #3b82f6 !important;
-        border: 2px solid #3b82f6 !important;
+    /* Base styles for all navigation buttons */
+    div[data-testid="column"] button[kind="secondary"] {
         border-radius: 5px !important;
         padding: 0.5rem 1rem !important;
         font-weight: 500 !important;
-        transition: all 0.3s !important;
-    }
-    div[data-testid="column"]:nth-child(1) button[kind="secondary"]:hover {
-        background: #3b82f6 !important;
-        color: white !important;
-        transform: translateY(-2px);
-    }
-    
-    /* Predict Churn Button - Red/Orange (Column 2) */
-    div[data-testid="column"]:nth-child(2) button[kind="secondary"] {
-        background: rgba(239, 68, 68, 0.2) !important;
-        color: #ef4444 !important;
-        border: 2px solid #ef4444 !important;
-        border-radius: 5px !important;
-        padding: 0.5rem 1rem !important;
-        font-weight: 500 !important;
-        transition: all 0.3s !important;
-    }
-    div[data-testid="column"]:nth-child(2) button[kind="secondary"]:hover {
-        background: #ef4444 !important;
-        color: white !important;
-        transform: translateY(-2px);
-    }
-    
-    /* Analytics Dashboard Button - Purple (Column 3) */
-    div[data-testid="column"]:nth-child(3) button[kind="secondary"] {
-        background: rgba(168, 85, 247, 0.2) !important;
-        color: #a855f7 !important;
-        border: 2px solid #a855f7 !important;
-        border-radius: 5px !important;
-        padding: 0.5rem 1rem !important;
-        font-weight: 500 !important;
-        transition: all 0.3s !important;
-    }
-    div[data-testid="column"]:nth-child(3) button[kind="secondary"]:hover {
-        background: #a855f7 !important;
-        color: white !important;
-        transform: translateY(-2px);
-    }
-    
-    /* Model Performance Button - Green (Column 4) */
-    div[data-testid="column"]:nth-child(4) button[kind="secondary"] {
-        background: rgba(29, 185, 84, 0.2) !important;
-        color: #1DB954 !important;
-        border: 2px solid #1DB954 !important;
-        border-radius: 5px !important;
-        padding: 0.5rem 1rem !important;
-        font-weight: 500 !important;
-        transition: all 0.3s !important;
-    }
-    div[data-testid="column"]:nth-child(4) button[kind="secondary"]:hover {
-        background: #1DB954 !important;
-        color: white !important;
-        transform: translateY(-2px);
+        transition: all 0.3s ease !important;
     }
     </style>
+    <script>
+    // Function to style navigation buttons by text content
+    function styleNavButtons() {
+        const buttons = document.querySelectorAll('button[kind="secondary"]');
+        buttons.forEach(function(btn) {
+            const text = btn.textContent.trim();
+            if (text === 'Home') {
+                btn.style.background = 'rgba(59, 130, 246, 0.2)';
+                btn.style.color = '#3b82f6';
+                btn.style.border = '2px solid #3b82f6';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.background = '#3b82f6';
+                    this.style.color = 'white';
+                    this.style.transform = 'translateY(-2px)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(59, 130, 246, 0.2)';
+                    this.style.color = '#3b82f6';
+                    this.style.transform = 'translateY(0)';
+                });
+            } else if (text === 'Predict Churn') {
+                btn.style.background = 'rgba(239, 68, 68, 0.2)';
+                btn.style.color = '#ef4444';
+                btn.style.border = '2px solid #ef4444';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.background = '#ef4444';
+                    this.style.color = 'white';
+                    this.style.transform = 'translateY(-2px)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(239, 68, 68, 0.2)';
+                    this.style.color = '#ef4444';
+                    this.style.transform = 'translateY(0)';
+                });
+            } else if (text === 'Analytics Dashboard') {
+                btn.style.background = 'rgba(168, 85, 247, 0.2)';
+                btn.style.color = '#a855f7';
+                btn.style.border = '2px solid #a855f7';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.background = '#a855f7';
+                    this.style.color = 'white';
+                    this.style.transform = 'translateY(-2px)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(168, 85, 247, 0.2)';
+                    this.style.color = '#a855f7';
+                    this.style.transform = 'translateY(0)';
+                });
+            } else if (text === 'Model Performance') {
+                btn.style.background = 'rgba(29, 185, 84, 0.2)';
+                btn.style.color = '#1DB954';
+                btn.style.border = '2px solid #1DB954';
+                btn.addEventListener('mouseenter', function() {
+                    this.style.background = '#1DB954';
+                    this.style.color = 'white';
+                    this.style.transform = 'translateY(-2px)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(29, 185, 84, 0.2)';
+                    this.style.color = '#1DB954';
+                    this.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    }
+    
+    // Apply styles when page loads
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(styleNavButtons, 100);
+        });
+    } else {
+        setTimeout(styleNavButtons, 100);
+    }
+    
+    // Re-apply styles after Streamlit reruns
+    const observer = new MutationObserver(function(mutations) {
+        setTimeout(styleNavButtons, 100);
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    </script>
     """, unsafe_allow_html=True)
 
 def main():
@@ -1099,7 +1124,51 @@ def show_prediction_page(model, preprocessor, df):
             pod_duration = st.selectbox("Preferred Podcast Duration", pod_duration_options, key='pod_duration')
             pod_satisfaction = st.selectbox("Podcast Variety Satisfaction", pod_satisfaction_options, key='pod_sat')
         
-        submitted = st.form_submit_button("🔮 Predict Churn Risk", use_container_width=True)
+        submitted = st.form_submit_button("🔮 Predict Churn Risk", use_container_width=True, key="predict_submit")
+        
+        # Add styling for submit button
+        st.markdown("""
+        <style>
+        button[data-testid="baseButton-primary"][aria-label*="Predict Churn Risk"],
+        button:has-text("Predict Churn Risk"),
+        form button[type="submit"] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 8px !important;
+            padding: 0.75rem 2rem !important;
+            font-weight: 600 !important;
+            font-size: 1.1rem !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+        }
+        button[data-testid="baseButton-primary"][aria-label*="Predict Churn Risk"]:hover,
+        button:has-text("Predict Churn Risk"):hover,
+        form button[type="submit"]:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+        }
+        </style>
+        <script>
+        // Ensure submit button has background color
+        setTimeout(function() {
+            const submitButtons = document.querySelectorAll('button[type="submit"], form button');
+            submitButtons.forEach(function(btn) {
+                if (btn.textContent.includes('Predict Churn Risk')) {
+                    btn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                    btn.style.color = 'white';
+                    btn.style.border = 'none';
+                    btn.style.borderRadius = '8px';
+                    btn.style.padding = '0.75rem 2rem';
+                    btn.style.fontWeight = '600';
+                    btn.style.fontSize = '1.1rem';
+                    btn.style.boxShadow = '0 4px 15px rgba(102, 126, 234, 0.4)';
+                }
+            });
+        }, 200);
+        </script>
+        """, unsafe_allow_html=True)
         
         if submitted:
             # Prepare user input
