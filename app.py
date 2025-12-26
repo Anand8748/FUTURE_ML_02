@@ -199,10 +199,15 @@ st.markdown("""
         text-align: inherit !important;
     }
     
-    /* Ensure main container alignment */
+    /* Ensure main container alignment - Increased width */
     .main .block-container {
-        max-width: 1200px !important;
-        padding: 2rem 2rem !important;
+        max-width: 1600px !important;
+        padding: 2rem 3rem !important;
+    }
+    
+    /* Center all main content */
+    .main {
+        text-align: center !important;
     }
     
     /* Fix header container alignment */
@@ -223,22 +228,58 @@ st.markdown("""
     
     /* Fix Streamlit Cloud specific alignment */
     section[data-testid="stAppViewContainer"] {
-        text-align: left !important;
+        text-align: center !important;
     }
     
     /* Ensure proper text alignment for all markdown content */
     .stMarkdownContainer {
-        text-align: inherit !important;
+        text-align: center !important;
     }
     
-    /* Fix form and input alignment */
+    /* Fix form and input alignment - keep forms left aligned */
     .stForm {
         text-align: left !important;
     }
     
-    /* Ensure columns maintain proper alignment */
+    /* Center all content sections */
+    .element-container {
+        text-align: center !important;
+    }
+    
+    /* Center feature cards container */
+    div[data-testid="column"] > div {
+        text-align: center !important;
+    }
+    
+    /* Center all feature cards in columns */
+    div[data-testid="column"] .feature-card {
+        margin: 0 auto !important;
+    }
+    
+    /* Ensure proper spacing for wider layout */
+    .stApp > div {
+        max-width: 100% !important;
+    }
+    
+    /* Center all section containers */
+    .element-container > div {
+        text-align: center !important;
+    }
+    
+    /* Ensure columns maintain proper alignment and center content */
     [data-testid="column"] {
-        text-align: left !important;
+        text-align: center !important;
+    }
+    
+    /* Center column containers */
+    [data-testid="column-container"] {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Center all Streamlit columns */
+    .stColumn {
+        text-align: center !important;
     }
     
     /* Video Section Styles */
@@ -306,43 +347,46 @@ st.markdown("""
         text-align: center !important;
         color: #666 !important;
         margin-bottom: 3rem !important;
-        max-width: 800px !important;
+        max-width: 1000px !important;
         margin-left: auto !important;
         margin-right: auto !important;
         display: block !important;
         width: 100% !important;
     }
     .feature-card {
-        background: white;
-        border-radius: 15px;
-        padding: 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s, box-shadow 0.3s;
-        height: 100%;
-        border: 1px solid #f0f0f0;
+        background: white !important;
+        border-radius: 15px !important;
+        padding: 2rem !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        transition: transform 0.3s, box-shadow 0.3s !important;
+        height: 100% !important;
+        border: 1px solid #f0f0f0 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
     .feature-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 30px rgba(29, 185, 84, 0.15);
     }
     .feature-icon {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        display: block;
+        font-size: 3rem !important;
+        margin: 0 auto 1rem auto !important;
+        display: block !important;
+        text-align: center !important;
     }
     .feature-title {
         font-size: 1.5rem !important;
         font-weight: 600 !important;
         color: #1a1a1a !important;
         margin-bottom: 1rem !important;
-        text-align: left !important;
+        text-align: center !important;
         display: block !important;
     }
     .feature-description {
         color: #666 !important;
         line-height: 1.6 !important;
         font-size: 1rem !important;
-        text-align: left !important;
+        text-align: center !important;
         display: block !important;
     }
     .stat-card {
@@ -391,36 +435,46 @@ st.markdown("""
         box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
     }
     .benefit-item {
-        display: flex;
-        align-items: start;
-        gap: 1rem;
-        padding: 1.5rem;
-        background: #f8f9fa;
-        border-radius: 10px;
-        margin-bottom: 1rem;
-        border-left: 4px solid #1DB954;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+        padding: 1.5rem !important;
+        background: #f8f9fa !important;
+        border-radius: 10px !important;
+        margin: 0 auto 1rem auto !important;
+        border-left: 4px solid #1DB954 !important;
+        max-width: 800px !important;
+        text-align: center !important;
     }
     .benefit-icon {
-        font-size: 2rem;
-        flex-shrink: 0;
+        font-size: 2rem !important;
+        flex-shrink: 0 !important;
+        text-align: center !important;
+    }
+    .benefit-content {
+        text-align: center !important;
+        flex: 1 !important;
     }
     .benefit-content h4 {
         margin: 0 0 0.5rem 0 !important;
         color: #1a1a1a !important;
         font-size: 1.2rem !important;
-        text-align: left !important;
+        text-align: center !important;
         display: block !important;
     }
     .benefit-content p {
         margin: 0 !important;
         color: #666 !important;
         line-height: 1.6 !important;
-        text-align: left !important;
+        text-align: center !important;
         display: block !important;
     }
     .how-it-works-step {
-        text-align: center;
-        padding: 2rem;
+        text-align: center !important;
+        padding: 2rem !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
     .step-number {
         width: 60px;
@@ -1108,6 +1162,8 @@ def show_home_page(df):
         {"icon": "🚀", "title": "Easy to Use", "desc": "Intuitive interface that requires no technical expertise to operate."}
     ]
     
+    # Center the benefits section with a container
+    st.markdown('<div style="max-width: 1000px; margin: 0 auto;">', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     
     for i, benefit in enumerate(benefits):
@@ -1122,6 +1178,8 @@ def show_home_page(df):
                 </div>
             </div>
             """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
     
     # Call to Action
     st.markdown("<br>", unsafe_allow_html=True)
