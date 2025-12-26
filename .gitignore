@@ -38,11 +38,27 @@ X_test.csv
 y_train.csv
 y_test.csv
 
-# Results
-model_results_summary.csv
+# Results - ignore all images by default, but allow specific ones
 *.png
 *.jpg
 *.jpeg
+
+# Allow specific visualization images needed for Model Performance page
+!roc_curves.png
+!feature_importance.png
+!model_comparison.png
+!spotify*.png
+!spotify*.jpg
+!spotify*.jpeg
+!hero_image.png
+!hero_image.jpg
+!hero_image.jpeg
+!background_image.png
+!background_image.jpg
+!background_image.jpeg
+
+# Allow model results summary (needed for Model Performance page)
+!model_results_summary.csv
 
 # IDE
 .vscode/
