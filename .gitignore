@@ -23,10 +23,14 @@ wheels/
 .installed.cfg
 *.egg
 
-# Model files
-*.pkl
-*.h5
-*.joblib
+# Model files (commented out for deployment - uncomment if you don't want to commit models)
+# *.pkl
+# *.h5
+# *.joblib
+
+# Keep these model files for deployment:
+# !preprocessor.pkl
+# !best_churn_model.pkl
 
 # Data files (keep original, ignore processed)
 X_train.csv
