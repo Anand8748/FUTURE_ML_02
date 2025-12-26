@@ -726,76 +726,68 @@ def create_navbar():
         buttons.forEach(function(btn) {
             const text = btn.textContent.trim();
             if (text === 'Home') {
-                // Professional Sky Blue - welcoming and modern
-                btn.style.background = 'linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%)';
-                btn.style.color = '#0ea5e9';
+                // Professional Sky Blue - welcoming and modern with visible background
+                btn.style.background = 'linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%)';
+                btn.style.color = 'white';
                 btn.style.border = '2px solid #0ea5e9';
-                btn.style.boxShadow = '0 2px 8px rgba(14, 165, 233, 0.2)';
+                btn.style.boxShadow = '0 3px 10px rgba(14, 165, 233, 0.3)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = 'linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%)';
-                    this.style.color = 'white';
+                    this.style.background = 'linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%)';
                     this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 4px 12px rgba(14, 165, 233, 0.4)';
+                    this.style.boxShadow = '0 5px 15px rgba(14, 165, 233, 0.5)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%)';
-                    this.style.color = '#0ea5e9';
+                    this.style.background = 'linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%)';
                     this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 2px 8px rgba(14, 165, 233, 0.2)';
+                    this.style.boxShadow = '0 3px 10px rgba(14, 165, 233, 0.3)';
                 });
             } else if (text === 'Predict Churn') {
-                // Professional Amber/Orange - attention-grabbing but sophisticated
-                btn.style.background = 'linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 146, 60, 0.15) 100%)';
-                btn.style.color = '#f59e0b';
+                // Professional Amber/Orange - attention-grabbing with visible background
+                btn.style.background = 'linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)';
+                btn.style.color = 'white';
                 btn.style.border = '2px solid #f59e0b';
-                btn.style.boxShadow = '0 2px 8px rgba(245, 158, 11, 0.2)';
+                btn.style.boxShadow = '0 3px 10px rgba(245, 158, 11, 0.3)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = 'linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)';
-                    this.style.color = 'white';
+                    this.style.background = 'linear-gradient(135deg, #fb923c 0%, #f59e0b 100%)';
                     this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 4px 12px rgba(245, 158, 11, 0.4)';
+                    this.style.boxShadow = '0 5px 15px rgba(245, 158, 11, 0.5)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 146, 60, 0.15) 100%)';
-                    this.style.color = '#f59e0b';
+                    this.style.background = 'linear-gradient(135deg, #f59e0b 0%, #fb923c 100%)';
                     this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 2px 8px rgba(245, 158, 11, 0.2)';
+                    this.style.boxShadow = '0 3px 10px rgba(245, 158, 11, 0.3)';
                 });
             } else if (text === 'Analytics Dashboard') {
-                // Professional Indigo - analytical and trustworthy
-                btn.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%)';
-                btn.style.color = '#6366f1';
+                // Professional Indigo - analytical with visible background
+                btn.style.background = 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)';
+                btn.style.color = 'white';
                 btn.style.border = '2px solid #6366f1';
-                btn.style.boxShadow = '0 2px 8px rgba(99, 102, 241, 0.2)';
+                btn.style.boxShadow = '0 3px 10px rgba(99, 102, 241, 0.3)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)';
-                    this.style.color = 'white';
+                    this.style.background = 'linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)';
                     this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 4px 12px rgba(99, 102, 241, 0.4)';
+                    this.style.boxShadow = '0 5px 15px rgba(99, 102, 241, 0.5)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%)';
-                    this.style.color = '#6366f1';
+                    this.style.background = 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)';
                     this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 2px 8px rgba(99, 102, 241, 0.2)';
+                    this.style.boxShadow = '0 3px 10px rgba(99, 102, 241, 0.3)';
                 });
             } else if (text === 'Model Performance') {
-                // Professional Emerald - success-oriented and modern
-                btn.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%)';
-                btn.style.color = '#10b981';
+                // Professional Emerald - success-oriented with visible background
+                btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                btn.style.color = 'white';
                 btn.style.border = '2px solid #10b981';
-                btn.style.boxShadow = '0 2px 8px rgba(16, 185, 129, 0.2)';
+                btn.style.boxShadow = '0 3px 10px rgba(16, 185, 129, 0.3)';
                 btn.addEventListener('mouseenter', function() {
-                    this.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-                    this.style.color = 'white';
+                    this.style.background = 'linear-gradient(135deg, #059669 0%, #10b981 100%)';
                     this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 4px 12px rgba(16, 185, 129, 0.4)';
+                    this.style.boxShadow = '0 5px 15px rgba(16, 185, 129, 0.5)';
                 });
                 btn.addEventListener('mouseleave', function() {
-                    this.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 100%)';
-                    this.style.color = '#10b981';
+                    this.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
                     this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 2px 8px rgba(16, 185, 129, 0.2)';
+                    this.style.boxShadow = '0 3px 10px rgba(16, 185, 129, 0.3)';
                 });
             }
         });
@@ -1143,7 +1135,7 @@ def show_prediction_page(model, preprocessor, df):
             pod_duration = st.selectbox("Preferred Podcast Duration", pod_duration_options, key='pod_duration')
             pod_satisfaction = st.selectbox("Podcast Variety Satisfaction", pod_satisfaction_options, key='pod_sat')
         
-        submitted = st.form_submit_button("🔮 Predict Churn Risk", use_container_width=True, key="predict_submit")
+        submitted = st.form_submit_button("🔮 Predict Churn Risk", use_container_width=True)
         
         # Add styling for submit button
         st.markdown("""
