@@ -185,6 +185,62 @@ st.markdown("""
         }
     }
     
+    /* Fix Streamlit Cloud text alignment issues */
+    .stMarkdown {
+        text-align: inherit !important;
+    }
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+        text-align: inherit !important;
+    }
+    div[data-testid="stMarkdownContainer"] {
+        text-align: inherit !important;
+    }
+    div[data-testid="stMarkdownContainer"] p {
+        text-align: inherit !important;
+    }
+    
+    /* Ensure main container alignment */
+    .main .block-container {
+        max-width: 1200px !important;
+        padding: 2rem 2rem !important;
+    }
+    
+    /* Fix header container alignment */
+    .header-container {
+        text-align: center !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    .header-container > div {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .header-title {
+        text-align: center !important;
+        display: inline-block !important;
+    }
+    
+    /* Fix Streamlit Cloud specific alignment */
+    section[data-testid="stAppViewContainer"] {
+        text-align: left !important;
+    }
+    
+    /* Ensure proper text alignment for all markdown content */
+    .stMarkdownContainer {
+        text-align: inherit !important;
+    }
+    
+    /* Fix form and input alignment */
+    .stForm {
+        text-align: left !important;
+    }
+    
+    /* Ensure columns maintain proper alignment */
+    [data-testid="column"] {
+        text-align: left !important;
+    }
+    
     /* Video Section Styles */
     .video-container {
         width: 100%;
@@ -237,20 +293,24 @@ st.markdown("""
     
     /* Professional Home Page Styles */
     .section-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
-        margin: 3rem 0 1.5rem 0;
-        color: #1a1a1a;
+        font-size: 2.5rem !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        margin: 3rem 0 1.5rem 0 !important;
+        color: #1a1a1a !important;
+        width: 100% !important;
+        display: block !important;
     }
     .section-subtitle {
-        font-size: 1.2rem;
-        text-align: center;
-        color: #666;
-        margin-bottom: 3rem;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 1.2rem !important;
+        text-align: center !important;
+        color: #666 !important;
+        margin-bottom: 3rem !important;
+        max-width: 800px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        width: 100% !important;
     }
     .feature-card {
         background: white;
@@ -271,36 +331,46 @@ st.markdown("""
         display: block;
     }
     .feature-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-bottom: 1rem;
+        font-size: 1.5rem !important;
+        font-weight: 600 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
+        display: block !important;
     }
     .feature-description {
-        color: #666;
-        line-height: 1.6;
-        font-size: 1rem;
+        color: #666 !important;
+        line-height: 1.6 !important;
+        font-size: 1rem !important;
+        text-align: left !important;
+        display: block !important;
     }
     .stat-card {
-        background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
-        border-radius: 15px;
-        padding: 2rem;
-        text-align: center;
-        color: white;
-        box-shadow: 0 4px 20px rgba(29, 185, 84, 0.2);
-        transition: transform 0.3s;
+        background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%) !important;
+        border-radius: 15px !important;
+        padding: 2rem !important;
+        text-align: center !important;
+        color: white !important;
+        box-shadow: 0 4px 20px rgba(29, 185, 84, 0.2) !important;
+        transition: transform 0.3s !important;
+        width: 100% !important;
+        display: block !important;
     }
     .stat-card:hover {
-        transform: scale(1.05);
+        transform: scale(1.05) !important;
     }
     .stat-number {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.5rem !important;
+        text-align: center !important;
+        display: block !important;
     }
     .stat-label {
-        font-size: 1.1rem;
-        opacity: 0.9;
+        font-size: 1.1rem !important;
+        opacity: 0.9 !important;
+        text-align: center !important;
+        display: block !important;
     }
     .cta-button {
         background: linear-gradient(90deg, #1DB954, #1ed760);
@@ -335,14 +405,18 @@ st.markdown("""
         flex-shrink: 0;
     }
     .benefit-content h4 {
-        margin: 0 0 0.5rem 0;
-        color: #1a1a1a;
-        font-size: 1.2rem;
+        margin: 0 0 0.5rem 0 !important;
+        color: #1a1a1a !important;
+        font-size: 1.2rem !important;
+        text-align: left !important;
+        display: block !important;
     }
     .benefit-content p {
-        margin: 0;
-        color: #666;
-        line-height: 1.6;
+        margin: 0 !important;
+        color: #666 !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+        display: block !important;
     }
     .how-it-works-step {
         text-align: center;
@@ -362,14 +436,18 @@ st.markdown("""
         margin: 0 auto 1rem;
     }
     .step-title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #1a1a1a;
-        margin-bottom: 0.5rem;
+        font-size: 1.3rem !important;
+        font-weight: 600 !important;
+        color: #1a1a1a !important;
+        margin-bottom: 0.5rem !important;
+        text-align: center !important;
+        display: block !important;
     }
     .step-description {
-        color: #666;
-        line-height: 1.6;
+        color: #666 !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        display: block !important;
     }
     
     /* Professional Footer Styles - Icons Only */
@@ -392,12 +470,14 @@ st.markdown("""
         margin: 0 auto 1rem;
     }
     .footer-copyright-text {
-        text-align: center;
-        font-size: 0.85rem;
-        color: #666;
-        margin-top: 1rem;
-        padding-top: 0;
-        border-top: none;
+        text-align: center !important;
+        font-size: 0.85rem !important;
+        color: #666 !important;
+        margin-top: 1rem !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+        width: 100% !important;
+        display: block !important;
     }
     .footer-copyright-text strong {
         color: #1DB954;
@@ -470,20 +550,25 @@ st.markdown("""
     }
     
     .main-header {
-        font-size: 3rem;
-        font-weight: 700;
-        background: linear-gradient(90deg, #1DB954, #1ed760);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-        margin-bottom: 2rem;
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        background: linear-gradient(90deg, #1DB954, #1ed760) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+        width: 100% !important;
+        display: block !important;
     }
     .sub-header {
-        font-size: 1.5rem;
-        color: #1DB954;
-        font-weight: 600;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem !important;
+        color: #1DB954 !important;
+        font-weight: 600 !important;
+        margin-top: 2rem !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
+        display: block !important;
+        width: 100% !important;
     }
     .metric-card {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -506,12 +591,19 @@ st.markdown("""
         box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
     }
     .prediction-box {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem;
-        border-radius: 15px;
-        color: white;
-        text-align: center;
-        margin: 2rem 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        padding: 2rem !important;
+        border-radius: 15px !important;
+        color: white !important;
+        text-align: center !important;
+        margin: 2rem 0 !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    .prediction-box h1, .prediction-box h2, .prediction-box p {
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
     }
     .high-risk {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -651,10 +743,10 @@ def create_navbar():
     
     # Create visible navbar header with logo, brand, and navigation (responsive)
     st.markdown(f"""
-    <div class="header-container" style="background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%); padding: 1rem 2rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+    <div class="header-container" style="background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%); padding: 1rem 2rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center; width: 100%; display: block;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; text-align: center; width: 100%;">
             {logo_html}
-            <span class="header-title" style="font-size: 2.5rem; font-weight: 700; color: white; text-align: center;">Spotify Churn Prediction</span>
+            <span class="header-title" style="font-size: 2.5rem; font-weight: 700; color: white; text-align: center; display: inline-block;">Spotify Churn Prediction</span>
         </div>
     </div>
     <style>

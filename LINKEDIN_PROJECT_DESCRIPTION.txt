@@ -1,0 +1,11 @@
+🎵 Spotify Customer Churn Prediction System
+
+I developed an end-to-end machine learning solution to predict customer churn for Spotify users. The system processes user behavior data, trains multiple ML models (Logistic Regression, Random Forest, XGBoost), and provides real-time churn predictions through an interactive Streamlit web application.
+
+Key Features: Automated data preprocessing pipeline, model comparison and selection, interactive analytics dashboard with Plotly visualizations, real-time churn probability predictions with actionable recommendations, and a deployed web application with modern UI/UX design.
+
+Technologies: Python, Pandas, Scikit-learn, XGBoost, Streamlit, Plotly
+Result: Achieved 85-95% accuracy in predicting customer churn, helping businesses identify at-risk customers and improve retention strategies.
+
+#MachineLearning #DataScience #Python #ChurnPrediction #Streamlit #XGBoost
+
