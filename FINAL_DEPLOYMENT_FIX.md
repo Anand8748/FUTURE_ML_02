@@ -1,13 +1,13 @@
 # Final Fix for Streamlit Cloud Deployment
 
-## 🔴 Root Cause
+## Root Cause
 
 The error persists because:
 1. **pandas 2.1.4 doesn't support Python 3.13** - It tries to build from source and fails
 2. **Streamlit Cloud is using Python 3.13** despite `runtime.txt` specifying 3.11
 3. **Version constraint** `pandas>=2.0.0,<2.2.0` still allows 2.1.4 to be selected
 
-## ✅ Final Solution
+##  Final Solution
 
 ### Updated `requirements.txt`
 Changed to use **pandas 2.2.0+** which has Python 3.13 support:
